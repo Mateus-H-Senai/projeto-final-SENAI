@@ -29,4 +29,6 @@ Back-end: Daniel, Douglas, Jonathan, Mateus, Thalles
 
 designs:
 
+diagrama: https://app.diagrams.net/#HMateus-H-Senai%2Fprojeto-final-SENAI%2Fmain%2FDiagrama%20sem%20nome.drawio
+
 Tela login: https://www.figma.com/community/file/945669252196688709/fast-food-desktop-app-login
