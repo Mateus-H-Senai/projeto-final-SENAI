@@ -21,7 +21,7 @@ db6 = pymysql.connect(**db6_config)
 
 @app.route('/')
 def pag_inicial():
-    return "Bem vindo a Comidaria! Acesse a Area de Login!"
+    return redirect(url_for('login'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -54,17 +54,15 @@ def login():
             session['user_id'] = user[0]
             flash('Login bem-sucedido!', 'success')
             # Depois de logado, redirecione para onde quiser
-            return redirect(url_for('home'))
+            return redirect('/home/' + user[1]) 
         else:
             flash('Login falhou. Verifique seu nome de usuário e senha.', 'danger')
 
     return render_template('login.html')
 
-@app.route('/home', methods=['GET', 'POST'])
-def home():
+@app.route('/home/<username>', methods=['GET', 'POST'])
+def home(username):
     return render_template('home.html')
-
-
 
 if __name__ == '__main__':
     app.run()

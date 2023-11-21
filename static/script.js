@@ -4,7 +4,6 @@ import CreateSession from "./session.js"
 let Create_se = new CreateSession()
 console.log(Create_se.Get_sessao())
 if(Create_se.Get_sessao() != null){
-    console.log("io")
-    window.location.href = "http://127.0.0.1:5000/home"
+    window.location.href = `http://127.0.0.1:5000/home/${Create_se.Get_sessao()}`
 }
 

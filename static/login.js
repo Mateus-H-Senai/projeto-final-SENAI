@@ -1,8 +1,8 @@
 import CreateSession from "./session.js"
-
-//Criação de sessao para o usuario
+let url = window.location.href.split("/")
 let session = new CreateSession()
-session.Nova_sessao("usuario")
+
+session.Nova_sessao(url[url.length - 1])
 
 document.getElementById("logout").addEventListener("click",()=>{
   session.Esquecer_sessao()  
