@@ -49,9 +49,9 @@ def login():
         cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
         user = cursor.fetchone()
         cursor.close()
-
         if user:
             session['user_id'] = user[0]
+            session['username'] = username
             flash('Login bem-sucedido!', 'success')
             # Depois de logado, redirecione para onde quiser
             return redirect('/home/' + user[1]) 
@@ -62,6 +62,9 @@ def login():
 
 @app.route('/home/<username>', methods=['GET', 'POST'])
 def home(username):
+    print(session.get('username'))
+    if(session.get('username') != username):
+       return render_template('erro.html')
     return render_template('home.html')
 
 if __name__ == '__main__':

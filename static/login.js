@@ -8,3 +8,4 @@ document.getElementById("logout").addEventListener("click",()=>{
   session.Esquecer_sessao()  
   window.location.href = "http://127.0.0.1:5000/login"
 })
+
