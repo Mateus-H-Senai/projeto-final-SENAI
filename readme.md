@@ -6,6 +6,8 @@ Por exemplo: usuário A adicionou lasanha; o usuário B pode usá-lo como placeh
 
 ## Banco de dados 
 
+criar tabela de usuários 
+
 ## Back-end 
 
 
@@ -13,7 +15,8 @@ Por exemplo: usuário A adicionou lasanha; o usuário B pode usá-lo como placeh
 ## Front-end
 
 O usuário acessará a landing page (que nesse caso será a tela de login direto). A tela de login e cadastro se alternarão.
-Quando o usuário estiver logado, a página principal será exibida. A página principal deve conter: consulta as comidas adicionadas; adição de comidas a lista;  
+Quando o usuário estiver logado, a página principal será exibida. A página principal deve conter: consulta as comidas adicionadas; 
+adição de comidas a lista e, caso o usuário clique em uma das comidas consultadas, exibir seus detalhes
 
 
 
